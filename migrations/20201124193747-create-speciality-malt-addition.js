@@ -1,7 +1,7 @@
 "use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("maltAdditions", {
+    await queryInterface.createTable("specialityMaltAdditions", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -22,16 +22,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      percentageOfExtract: {
-        type: Sequelize.FLOAT,
-        allowNull: false,
-      },
-      defaultExtract: {
-        type: Sequelize.FLOAT,
-      },
-      defaultMoistureInPercentage: {
-        type: Sequelize.FLOAT,
-      },
       defaultColorInEBC: {
         type: Sequelize.INTEGER,
       },
@@ -50,6 +40,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("maltAdditions");
+    await queryInterface.dropTable("specialityMaltAdditions");
   },
 };
