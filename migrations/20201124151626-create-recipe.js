@@ -21,6 +21,19 @@ module.exports = {
       },
       imageURL: { type: Sequelize.STRING },
       description: { type: Sequelize.TEXT },
+      typeOfRecipe: {
+        type: Sequelize.ENUM(
+          "Extract",
+          "All grain - single mash",
+          "All grain - step mash",
+          "All grain - decoction mash"
+        ),
+      },
+      complexity: {
+        type: Sequelize.ENUM(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+        allowNull: false,
+      },
+      style: { type: Sequelize.STRING },
       ABV: { type: Sequelize.FLOAT, allowNull: false },
       IBU: { type: Sequelize.INTEGER, allowNull: false },
       OGinPlato: { type: Sequelize.FLOAT },

@@ -1,7 +1,7 @@
 "use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("hopAdditions", {
+    await queryInterface.createTable("boilHopAdditions", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -29,23 +29,23 @@ module.exports = {
         type: Sequelize.FLOAT,
       },
       timeOfAdditionInMinBeforeEndOfBoil: Sequelize.INTEGER,
-      isDryHop: {
-        type: Sequelize.BOOLEAN,
+      defaultQuantityInGramsPerLiter: {
+        type: Sequelize.FLOAT,
         allowNull: false,
       },
-      dryHopTimingInPercentageAF: Sequelize.INTEGER,
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-      dryHopRateInGramsPerLitre: { type: Sequelize.FLOAT },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
+      // dryHopTimingInPercentageAF: Sequelize.INTEGER,
+      // createdAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE,
+      // },
+      // dryHopRateInGramsPerLitre: { type: Sequelize.FLOAT },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE,
+      // },
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("hopAdditions");
+    await queryInterface.dropTable("boilHopAdditions");
   },
 };

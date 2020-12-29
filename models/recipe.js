@@ -26,6 +26,19 @@ module.exports = (sequelize, Datatype) => {
       authorId: { type: Datatype.INTEGER, allowNull: false },
       imageURL: { type: Datatype.STRING },
       description: { type: Datatype.TEXT },
+      typeOfRecipe: {
+        type: DataTypes.ENUM(
+          "Extract",
+          "All grain - single mash",
+          "All grain - step mash",
+          "All grain - decoction mash"
+        ),
+      },
+      complexity: {
+        type: DataTypes.ENUM(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+        allowNull: false,
+      },
+      style: { type: Datatype.STRING },
       ABV: { type: Datatype.FLOAT, allowNull: false },
       IBU: { type: Datatype.INTEGER, allowNull: false },
       OGinPlato: { type: Datatype.FLOAT },
@@ -36,7 +49,6 @@ module.exports = (sequelize, Datatype) => {
       yeastStrain: { type: Datatype.STRING, allowNull: false },
       PitchRateInGramsperLiter: { type: Datatype.FLOAT },
       BoilDurationInMin: { type: Datatype.INTEGER, allowNull: false },
-      FermentationTemperature: { type: Datatype.FLOAT },
       comments: { type: Datatype.TEXT },
     },
     {
