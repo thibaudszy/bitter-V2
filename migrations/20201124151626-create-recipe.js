@@ -30,7 +30,7 @@ module.exports = {
         ),
       },
       complexity: {
-        type: Sequelize.ENUM(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       style: { type: Sequelize.STRING },
