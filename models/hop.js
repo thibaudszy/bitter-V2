@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   hop.init(
     {
-      name: DataTypes.STRING,
+      variety: DataTypes.STRING,
       alphaAcidContentRangeMin: DataTypes.FLOAT,
       alphaAcidContentRangeMax: DataTypes.FLOAT,
       defaultAlphaAcidContent: DataTypes.FLOAT,

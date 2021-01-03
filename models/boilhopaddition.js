@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   boilHopAddition.init(
     {
       recipeId: { type: DataTypes.INTEGER, allowNull: false },
-      name: { type: DataTypes.STRING, allowNull: false },
+      variety: { type: DataTypes.STRING, allowNull: false },
       alphaAcidContent: DataTypes.FLOAT,
       percentageAlphaAcidsFromAddition: DataTypes.FLOAT,
       timeOfAdditionInMinBeforeEndOfBoil: { type: DataTypes.INTEGER },
@@ -23,8 +23,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.FLOAT,
         allowNull: false,
       },
-      // dryHopTimingInPercentageAF: { type: DataTypes.INTEGER },
-      // dryHopRateInGramsPerLitre: { type: DataTypes.FLOAT },
     },
 
     {
