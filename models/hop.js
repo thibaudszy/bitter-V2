@@ -8,13 +8,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      hop.hasMany(models.boilHopAdditions);
+      hop.hasMany(models.dryHopAdditions);
     }
   }
   hop.init(
     {
       name: DataTypes.STRING,
-      alphaAcidContent: DataTypes.FLOAT,
+      alphaAcidContentRangeMin: DataTypes.FLOAT,
+      alphaAcidContentRangeMax: DataTypes.FLOAT,
+      defaultAlphaAcidContent: DataTypes.FLOAT,
     },
     {
       sequelize,

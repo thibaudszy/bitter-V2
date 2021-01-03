@@ -11,10 +11,15 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
-      alphaAcidContent: {
+      alphaAcidContentRangeMin: {
         type: Sequelize.FLOAT,
       },
-
+      alphaAcidContentRangeMax: {
+        type: Sequelize.FLOAT,
+      },
+      defaultAlphaAcidContent: {
+        type: Sequelize.FLOAT,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

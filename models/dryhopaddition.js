@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       dryHopAddition.belongsTo(models.recipe);
+      dryHopAddition.belongsTo(models.hop);
     }
   }
   dryHopAddition.init(

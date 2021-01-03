@@ -18,6 +18,16 @@ module.exports = {
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
       },
+      hopId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "hops",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
+      },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
