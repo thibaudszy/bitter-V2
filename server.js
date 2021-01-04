@@ -1,10 +1,10 @@
 const express = require("express");
 const corsMiddleware = require("cors");
 const authRouter = require("./routers/auth");
-const recipesRouter = require("./routers/recipes");
-const usersRouter = require("./routers/users");
-const LibrariesRouter = require("./routers/library");
-const BrewsRouter = require("./routers/brews");
+// const recipesRouter = require("./routers/recipes");
+// const usersRouter = require("./routers/users");
+// const LibrariesRouter = require("./routers/library");
+// const BrewsRouter = require("./routers/brews");
 
 const app = express();
 const PORT = process.env.PORT || 4000;

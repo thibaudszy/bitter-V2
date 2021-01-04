@@ -15,7 +15,7 @@ module.exports = (sequelize, Datatype) => {
         as: "recipeInLibrary",
       });
       recipe.hasMany(models.maltAddition);
-      recipe.hasMany(models.hopAddition);
+      recipe.hasMany(models.boilHopAddition);
       recipe.hasMany(models.mashStep);
       recipe.hasMany(models.brew);
     }
@@ -27,7 +27,7 @@ module.exports = (sequelize, Datatype) => {
       imageURL: { type: Datatype.STRING },
       description: { type: Datatype.TEXT },
       typeOfRecipe: {
-        type: DataTypes.ENUM(
+        type: Datatype.ENUM(
           "Extract",
           "All grain - single mash",
           "All grain - step mash",
@@ -35,7 +35,7 @@ module.exports = (sequelize, Datatype) => {
         ),
       },
       complexity: {
-        type: DataTypes.INTEGER, //ENUM("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+        type: Datatype.INTEGER, //ENUM("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
         allowNull: false,
       },
       style: { type: Datatype.STRING },

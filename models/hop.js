@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      hop.hasMany(models.boilHopAdditions);
-      hop.hasMany(models.dryHopAdditions);
+      hop.hasMany(models.boilHopAddition);
+      hop.hasMany(models.dryHopAddition);
     }
   }
   hop.init(
