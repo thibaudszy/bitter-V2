@@ -29,11 +29,11 @@ module.exports = {
         allowNull: false,
       },
       preferedUnitBeerDensity: {
-        type: Sequelize.ENUM("gravity, plato"),
+        type: Sequelize.ENUM("gravity", "plato"),
         allowNull: false,
       },
       generalBrewingUnits: {
-        type: Sequelize.ENUM("EBC, UK, US"),
+        type: Sequelize.ENUM("EBC", "UK", "US"),
         allowNull: false,
       },
       createdAt: {

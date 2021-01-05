@@ -1,6 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
-module.exports = (sequelize, Datatype) => {
+module.exports = (sequelize, DataTypes) => {
   class recipe extends Model {
     /**
      * Helper method for defining associations.
@@ -22,12 +22,12 @@ module.exports = (sequelize, Datatype) => {
   }
   recipe.init(
     {
-      name: { type: Datatype.STRING, allowNull: false },
-      authorId: { type: Datatype.INTEGER, allowNull: false },
-      imageURL: { type: Datatype.STRING },
-      description: { type: Datatype.TEXT },
+      name: { type: DataTypes.STRING, allowNull: false },
+      authorId: { type: DataTypes.INTEGER, allowNull: false },
+      imageURL: { type: DataTypes.STRING },
+      description: { type: DataTypes.TEXT },
       typeOfRecipe: {
-        type: Datatype.ENUM(
+        type: DataTypes.ENUM(
           "Extract",
           "All grain - single mash",
           "All grain - step mash",
@@ -35,21 +35,21 @@ module.exports = (sequelize, Datatype) => {
         ),
       },
       complexity: {
-        type: Datatype.INTEGER, //ENUM("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+        type: DataTypes.INTEGER, //ENUM("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
         allowNull: false,
       },
-      style: { type: Datatype.STRING },
-      ABV: { type: Datatype.FLOAT, allowNull: false },
-      IBU: { type: Datatype.INTEGER, allowNull: false },
-      OGinPlato: { type: Datatype.FLOAT },
-      FGinPlato: { type: Datatype.FLOAT, allowNull: false },
-      DesiredCarbonationInGramsPerLiter: { type: Datatype.FLOAT },
-      colorInEBC: { type: Datatype.INTEGER },
-      LiquorToGristRatio: { type: Datatype.FLOAT, allowNull: false },
-      yeastStrain: { type: Datatype.STRING, allowNull: false },
-      PitchRateInGramsperLiter: { type: Datatype.FLOAT },
-      BoilDurationInMin: { type: Datatype.INTEGER, allowNull: false },
-      comments: { type: Datatype.TEXT },
+      style: { type: DataTypes.STRING },
+      ABV: { type: DataTypes.FLOAT, allowNull: false },
+      IBU: { type: DataTypes.INTEGER, allowNull: false },
+      OGinPlato: { type: DataTypes.FLOAT },
+      FGinPlato: { type: DataTypes.FLOAT, allowNull: false },
+      DesiredCarbonationInGramsPerLiter: { type: DataTypes.FLOAT },
+      colorInEBC: { type: DataTypes.INTEGER },
+      LiquorToGristRatio: { type: DataTypes.FLOAT, allowNull: false },
+      yeastStrain: { type: DataTypes.STRING, allowNull: false },
+      PitchRateInGramsperLiter: { type: DataTypes.FLOAT },
+      BoilDurationInMin: { type: DataTypes.INTEGER, allowNull: false },
+      comments: { type: DataTypes.TEXT },
     },
     {
       sequelize,
