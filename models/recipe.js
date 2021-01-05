@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
         ),
       },
       complexity: {
-        type: DataTypes.INTEGER, //ENUM("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       style: { type: DataTypes.STRING },
