@@ -34,11 +34,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       preferedUnitBeerDensity: {
-        type: DataTypes.ENUM("gravity, plato"),
+        type: DataTypes.ENUM("gravity", "plato"),
         allowNull: false,
       },
       generalBrewingUnits: {
-        type: DataTypes.ENUM("EBC, UK, US"),
+        type: DataTypes.ENUM("EBC", "UK", "US"),
         allowNull: false,
       },
     },
