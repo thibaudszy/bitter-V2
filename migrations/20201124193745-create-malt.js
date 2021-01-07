@@ -29,6 +29,9 @@ module.exports = {
       defaultColorInEBC: {
         type: Sequelize.FLOAT,
       },
+      defaultMoistureInPercentage: {
+        type: Sequelize.FLOAT,
+      },
       isBaseMalt: Sequelize.BOOLEAN,
       createdAt: {
         allowNull: false,
