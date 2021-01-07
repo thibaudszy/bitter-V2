@@ -26,19 +26,6 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-        // {
-        //   recipeId: 1,
-        //   variety: "Citra",
-        //   alphaAcidContent: 13,
-        //   percentageAlphaAcidsFromAddition: null,
-        //   timeOfAdditionInMinBeforeEndOfBoil: null,
-        //   isDryHop: true,
-        //   dryHopTimingInPercentageAF: 80,
-        //   dryHopRateInGramsPerLitre: 5,
-        //   createdAt: new Date(),
-        //   updatedAt: new Date(),
-        // },
-
         {
           recipeId: 2,
           variety: "Magnum",

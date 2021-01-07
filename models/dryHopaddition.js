@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
   dryHopAddition.init(
     {
       recipeId: { type: DataTypes.INTEGER, allowNull: false },
+      hopId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
       variety: { type: DataTypes.STRING, allowNull: false },
       dryHopTimingInPercentageAF: { type: DataTypes.INTEGER },
       timing: { type: DataTypes.FLOAT },
