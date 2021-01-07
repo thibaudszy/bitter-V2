@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       colorInEBCRangeMin: DataTypes.FLOAT,
       colorInEBCRangeMax: DataTypes.FLOAT,
       defaultColorInEBC: DataTypes.FLOAT,
+      defaultMoistureInPercentage: DataTypes.FLOAT,
       isBaseMalt: DataTypes.BOOLEAN,
     },
     {
