@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
     {
       recipeId: { type: DataTypes.INTEGER, allowNull: false },
       variety: { type: DataTypes.STRING, allowNull: false },
+      hopId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
       alphaAcidContent: DataTypes.FLOAT,
       percentageAlphaAcidsFromAddition: DataTypes.FLOAT,
       timeOfAdditionInMinBeforeEndOfBoil: { type: DataTypes.INTEGER },
