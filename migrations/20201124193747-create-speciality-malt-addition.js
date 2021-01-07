@@ -18,6 +18,13 @@ module.exports = {
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
       },
+      maltId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "malts",
+          key: "id",
+        },
+      },
       name: {
         type: Sequelize.STRING,
         allowNull: false,

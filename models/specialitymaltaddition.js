@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       recipeId: { type: DataTypes.INTEGER, allowNull: false },
       name: { type: DataTypes.STRING, allowNull: false },
+      maltId: { type: DataTypes.INTEGER },
       percentageOfExtract: { type: DataTypes.FLOAT, allowNull: false },
       defaultColorInEBC: DataTypes.INTEGER,
       defaultQuantityInGramsPerLiter: {
