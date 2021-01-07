@@ -18,19 +18,21 @@ module.exports = {
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
       },
+      hopId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "hops",
+          key: "id",
+        },
+      },
       variety: {
         type: Sequelize.STRING,
         allowNull: false,
       },
 
-      dryHopTimingInPercentageAF: Sequelize.INTEGER,
-      createdAt: {
-        type: Sequelize.FLOAT,
-      },
-      dryHopTimingInHoursAfterStartOfFementation: Sequelize.INTEGER,
-      createdAt: {
-        type: Sequelize.INTEGER,
-      },
+      timing: { type: Sequelize.FLOAT },
+      timingUnit: { type: Sequelize.ENUM("hours", "AF") },
       dryHopRateInGramsPerLitre: { type: Sequelize.FLOAT },
       updatedAt: {
         allowNull: false,
