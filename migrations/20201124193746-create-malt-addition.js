@@ -20,7 +20,6 @@ module.exports = {
       },
       maltId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
           model: "malts",
           key: "id",
