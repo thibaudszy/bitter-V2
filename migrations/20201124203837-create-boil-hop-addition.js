@@ -43,16 +43,14 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: false,
       },
-      // dryHopTimingInPercentageAF: Sequelize.INTEGER,
-      // createdAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE,
-      // },
-      // dryHopRateInGramsPerLitre: { type: Sequelize.FLOAT },
-      // updatedAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE,
-      // },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
