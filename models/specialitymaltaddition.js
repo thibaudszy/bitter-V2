@@ -14,9 +14,8 @@ module.exports = (sequelize, DataTypes) => {
   maltAddition.init(
     {
       recipeId: { type: DataTypes.INTEGER, allowNull: false },
-      name: { type: DataTypes.STRING, allowNull: false },
+      type: { type: DataTypes.STRING, allowNull: false },
       maltId: { type: DataTypes.INTEGER },
-      percentageOfExtract: { type: DataTypes.FLOAT, allowNull: false },
       defaultColorInEBC: DataTypes.INTEGER,
       defaultQuantityInGramsPerLiter: {
         type: DataTypes.FLOAT,
